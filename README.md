@@ -10,7 +10,7 @@ Android Library for prompt tip ( according to [offer education](https://www.goog
 
 # Get It 
 
-Add it in your root build.gradle at the end of repositories:
+**Step 1.** Add it in your root build.gradle at the end of repositories:
 
 ```gradle
 allprojects {
@@ -21,7 +21,7 @@ allprojects {
   }
 ```
 
-Step 2. Add the dependency
+**Step 2.** Add the dependency
 
 
 ```gradle

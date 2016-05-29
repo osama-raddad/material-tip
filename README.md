@@ -1,5 +1,5 @@
 # material-tip
-Android Library for prompt tip ( according to [Offer education](https://www.google.com/design/spec/growth-communications/onboarding.html#onboarding-quickstart) )
+Android Library for prompt tip ( according to [offer education](https://www.google.com/design/spec/growth-communications/onboarding.html#onboarding-quickstart) )
 
 [![](https://jitpack.io/v/fcannizzaro/material-tip.svg)](https://jitpack.io/#fcannizzaro/material-tip)
 [![Build Status](https://travis-ci.org/fcannizzaro/material-tip.svg?branch=master)](https://travis-ci.org/fcannizzaro/material-tip)
@@ -26,7 +26,7 @@ Step 2. Add the dependency
 
 ```gradle
 dependencies {
-    compile 'com.github.fcannizzaro:material-tip:0.1.3'
+    compile 'com.github.fcannizzaro:material-tip:1.0.0'
 }
 ```
 

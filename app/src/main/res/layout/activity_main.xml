@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right|end"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_done"
+        android:background="#EEEEEE"
+        app:layout_behavior="com.github.fcannizzaro.materialtip.TipBehavior"/>
+
+    <com.github.fcannizzaro.materialtip.MaterialTip
+        android:id="@+id/tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:visibility="visible"
+        app:tip_icon="@drawable/lab"
+        app:tip_negative="@string/tip_negative"
+        app:tip_positive="@string/tip_positive"
+        app:tip_text="@string/tip_description"
+        app:tip_title="@string/tip_title"
+        app:tip_title_visible="true"/>
+
+</android.support.design.widget.CoordinatorLayout>

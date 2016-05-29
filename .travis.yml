@@ -1,0 +1,14 @@
+language: android
+android:
+  components:
+    - tools
+    - build-tools-23.0.3
+    - android-23
+    - extra-android-support
+    - extra-android-m2repository
+
+  licenses:
+    - '.+'
+
+before_install:
+ - chmod +x gradlew

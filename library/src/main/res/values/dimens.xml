@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="tip_text">15sp</dimen>
+    <dimen name="tip_title">16sp</dimen>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MaterialTip">
+        <attr name="tip_color" format="color"/>
+        <attr name="tip_background" format="color"/>
+        <attr name="tip_title_color" format="color"/>
+        <attr name="tip_text_color" format="color"/>
+        <attr name="tip_title" format="string"/>
+        <attr name="tip_title_visible" format="boolean"/>
+        <attr name="tip_icon" format="integer"/>
+        <attr name="tip_text" format="string"/>
+        <attr name="tip_positive" format="string"/>
+        <attr name="tip_negative" format="string"/>
+    </declare-styleable>
+</resources>

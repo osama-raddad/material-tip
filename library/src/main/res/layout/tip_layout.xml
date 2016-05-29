@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tip"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/tip.border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/tip_border"/>
+
+    <TextView
+        android:id="@+id/tip.title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:textColor="@color/tip_title"
+        android:textSize="@dimen/tip_title"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:id="@+id/tip.top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/tip.icon"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"/>
+
+        <TextView
+            android:id="@+id/tip.text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/tip.icon"
+            android:layout_toRightOf="@+id/tip.icon"
+            android:fontFamily="sans-serif"
+            android:lineSpacingExtra="2dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textColor="@color/tip_text"
+            android:textSize="@dimen/tip_text"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/tip.negative"
+            style="@style/TipButton"/>
+
+        <Button
+            android:id="@+id/tip.positive"
+            style="@style/TipButton"
+            android:layout_marginRight="16dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

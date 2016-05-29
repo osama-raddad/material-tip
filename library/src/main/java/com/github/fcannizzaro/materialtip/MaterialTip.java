@@ -11,6 +11,7 @@ import android.support.annotation.DrawableRes;
 import android.support.annotation.StringRes;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -24,6 +25,7 @@ import com.github.fcannizzaro.materialtip.util.ButtonListener;
 /**
  * Francesco Cannizzaro (fcannizzaro)
  */
+@SuppressWarnings("unused")
 public class MaterialTip extends RelativeLayout implements View.OnClickListener, View.OnTouchListener {
 
     private Context context;
@@ -34,6 +36,7 @@ public class MaterialTip extends RelativeLayout implements View.OnClickListener,
     private View tip;
     private int color, background, titleColor, textColor;
     private float eventY, MIN_DISTANCE;
+    private boolean visible;
 
     public MaterialTip(Context context) {
         super(context);
@@ -75,8 +78,9 @@ public class MaterialTip extends RelativeLayout implements View.OnClickListener,
     private void init() {
 
         context = getContext();
-        View view = inflate(context, R.layout.tip_layout, null);
-        addView(view);
+
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflater.inflate(R.layout.tip_layout, this, true);
 
         tip = findViewById(R.id.tip);
         positive = (Button) findViewById(R.id.tip_positive);
@@ -207,19 +211,12 @@ public class MaterialTip extends RelativeLayout implements View.OnClickListener,
     public void show() {
 
         animate()
-                .translationY(-getHeight())
                 .translationY(0)
-                .setDuration(200)
+                .setDuration(300)
                 .setListener(new AnimationAdapter() {
-
-                    @Override
-                    public void onAnimationStart(Animator animation) {
-                        setVisibility(VISIBLE);
-                    }
-
                     @Override
                     public void onAnimationEnd(Animator animation) {
-                        setVisibility(VISIBLE);
+                        visible = true;
                     }
                 })
                 .start();
@@ -230,18 +227,18 @@ public class MaterialTip extends RelativeLayout implements View.OnClickListener,
 
         animate()
                 .translationY(getHeight())
-                .setDuration(200)
+                .setDuration(300)
                 .setListener(new AnimationAdapter() {
                     @Override
                     public void onAnimationEnd(Animator animation) {
-                        setVisibility(GONE);
+                        visible = false;
                     }
                 })
                 .start();
     }
 
     public void toggle() {
-        if (isShown())
+        if (visible)
             hide();
         else
             show();
@@ -303,6 +300,8 @@ public class MaterialTip extends RelativeLayout implements View.OnClickListener,
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         MIN_DISTANCE = getHeight() / 4;
+        setTranslationY(getHeight());
     }
+
 
 }

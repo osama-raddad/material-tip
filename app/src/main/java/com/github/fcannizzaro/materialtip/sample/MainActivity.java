@@ -1,6 +1,5 @@
 package com.github.fcannizzaro.materialtip.sample;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -21,9 +20,9 @@ public class MainActivity extends AppCompatActivity {
                 .withText("Something!")
                 .withPositive("save")
                 .withNegative("discard")
-                .withBackground(Color.parseColor("#363636"))
-                .withTextColor(Color.parseColor("#f5f5f5"))
-                .withTitleColor(Color.WHITE)
+                .withBackgroundRes(R.color.tip_background)
+                .withTextColorRes(R.color.tip_text)
+                .withTitleColorRes(R.color.tip_title)
                 .withButtonListener(new ButtonListener() {
 
                     @Override
@@ -35,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onNegative(MaterialTip tip) {
                         System.out.println("negative");
                     }
+
                 });
 
         findViewById(R.id.fab).setOnClickListener(new View.OnClickListener() {

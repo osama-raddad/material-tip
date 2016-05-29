@@ -4,8 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    android:background="#EEEEEE">
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
@@ -13,8 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right|end"
         android:layout_margin="8dp"
-        android:src="@drawable/ic_done"
         android:background="#EEEEEE"
+        android:src="@drawable/ic_done"
         app:layout_behavior="com.github.fcannizzaro.materialtip.TipBehavior"/>
 
     <com.github.fcannizzaro.materialtip.MaterialTip
@@ -22,7 +22,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:visibility="visible"
         app:tip_icon="@drawable/lab"
         app:tip_negative="@string/tip_negative"
         app:tip_positive="@string/tip_positive"

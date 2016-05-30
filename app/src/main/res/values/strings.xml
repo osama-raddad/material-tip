@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">material-tip</string>
+    <string name="app_name">Google Laboratory</string>
     <string name="tip_description">Walk through how to use Google Laboratory or tap \'Tips\' in Settings when you want a fresher later.</string>
     <string name="tip_negative">no thanks</string>
     <string name="tip_positive">show me how</string>

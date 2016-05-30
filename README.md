@@ -3,6 +3,7 @@ Android Library for prompt tip ( according to [offer education](https://www.goog
 
 [![](https://jitpack.io/v/fcannizzaro/material-tip.svg)](https://jitpack.io/#fcannizzaro/material-tip)
 [![Build Status](https://travis-ci.org/fcannizzaro/material-tip.svg?branch=master)](https://travis-ci.org/fcannizzaro/material-tip)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-material--tip-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/3648)
 
 # Sample (GIF)
 

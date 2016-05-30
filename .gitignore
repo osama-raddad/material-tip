@@ -1,6 +1,7 @@
 *.iml
 .gradle
 /.idea
+Thumbs.db
 /local.properties
 /.idea/workspace.xml
 /.idea/libraries

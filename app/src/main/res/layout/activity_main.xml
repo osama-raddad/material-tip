@@ -1,32 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<android.support.v4.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/container"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#EEEEEE">
+    android:layout_height="match_parent">
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right|end"
-        android:layout_margin="8dp"
-        android:background="#EEEEEE"
-        android:src="@drawable/ic_done"
-        app:layout_behavior="com.github.fcannizzaro.materialtip.TipBehavior"/>
-
-    <com.github.fcannizzaro.materialtip.MaterialTip
-        android:id="@+id/tip"
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        app:tip_icon="@drawable/lab"
-        app:tip_negative="@string/tip_negative"
-        app:tip_positive="@string/tip_positive"
-        app:tip_text="@string/tip_description"
-        app:tip_title="@string/tip_title"
-        app:tip_title_visible="true"/>
+        android:layout_height="match_parent"
+        android:background="#eeeeee">
 
-</android.support.design.widget.CoordinatorLayout>
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            app:titleTextColor="#fff"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/empty"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right|end"
+            android:layout_margin="8dp"
+            android:background="#EEEEEE"
+            android:src="@drawable/ic_done"
+            app:layout_behavior="com.github.fcannizzaro.materialtip.TipBehavior"/>
+
+        <com.github.fcannizzaro.materialtip.MaterialTip
+            android:id="@+id/tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:tip_icon="@drawable/lab"
+            app:tip_negative="@string/tip_negative"
+            app:tip_positive="@string/tip_positive"
+            app:tip_text="@string/tip_description"
+            app:tip_title="@string/tip_title"
+            app:tip_title_visible="true"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"/>
+
+</android.support.v4.widget.DrawerLayout>

@@ -5,13 +5,13 @@ Android Library for prompt tip ( according to [offer education](https://www.goog
 [![Build Status](https://travis-ci.org/fcannizzaro/material-tip.svg?branch=master)](https://travis-ci.org/fcannizzaro/material-tip)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-material--tip-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/3648)
 
-# Sample (GIF)
+# Sample
 
-![](https://raw.githubusercontent.com/fcannizzaro/material-tip/master/preview.gif)
+![](https://raw.githubusercontent.com/fcannizzaro/material-tip/master/sample.gif)
 
-# Get It 
+# How to include
 
-**Step 1.** Add it in your root build.gradle at the end of repositories:
+**Step 1.** Add it in your root **build.gradle** at the end of repositories:
 
 ```gradle
 allprojects {

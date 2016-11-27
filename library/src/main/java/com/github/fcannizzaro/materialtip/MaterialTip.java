@@ -244,6 +244,14 @@ public class MaterialTip extends RelativeLayout implements View.OnClickListener,
             show();
     }
 
+    /**
+     * If the current Material Tip is visible. <br/>
+     * This is useful when back button is pressed and you don't want to quit the application
+     */
+    public boolean isVisible(){
+        return visible;
+    }
+
     private void color() {
 
         // text color
@@ -270,9 +278,7 @@ public class MaterialTip extends RelativeLayout implements View.OnClickListener,
             else if (id == R.id.tip_negative)
                 listener.onNegative(this);
         }
-
         hide();
-
     }
 
 
@@ -286,13 +292,10 @@ public class MaterialTip extends RelativeLayout implements View.OnClickListener,
                 break;
 
             case MotionEvent.ACTION_UP:
-
                 if (event.getY() - eventY >= MIN_DISTANCE)
                     hide();
-
                 break;
         }
-
         return true;
     }
 

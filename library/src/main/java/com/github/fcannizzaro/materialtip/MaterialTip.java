@@ -51,6 +51,7 @@ public class MaterialTip extends RelativeLayout implements View.OnClickListener,
 
         try {
 
+            tip.setVisibility(GONE);
             color = array.getColor(R.styleable.MaterialTip_tip_color, ContextCompat.getColor(context, R.color.colorPrimary));
             background = array.getColor(R.styleable.MaterialTip_tip_background, ContextCompat.getColor(context, R.color.tip_background));
             titleColor = array.getColor(R.styleable.MaterialTip_tip_title_color, ContextCompat.getColor(context, R.color.tip_title));
@@ -215,6 +216,11 @@ public class MaterialTip extends RelativeLayout implements View.OnClickListener,
                 .setDuration(300)
                 .setListener(new AnimationAdapter() {
                     @Override
+                    public void onAnimationStart(Animator animation) {
+                        tip.setVisibility(VISIBLE);
+                    }
+
+                    @Override
                     public void onAnimationEnd(Animator animation) {
                         visible = true;
                     }
@@ -232,6 +238,7 @@ public class MaterialTip extends RelativeLayout implements View.OnClickListener,
                     @Override
                     public void onAnimationEnd(Animator animation) {
                         visible = false;
+                        tip.setVisibility(GONE);
                     }
                 })
                 .start();
